@@ -1,0 +1,112 @@
+
+<ion-header>
+<ion-navbar color="turquoise">
+    <ion-title>Create Work Permit </ion-title>
+</ion-navbar>
+</ion-header>
+
+<ion-content class="background" no-padding>
+  <ion-list>
+  
+    <ion-card class="date">
+      <ion-card-header text-center><b><small>Start Date and Time </small></b></ion-card-header>
+      <ion-item class="inputdate">
+            <ion-datetime [min] = "mindate" max = "2028-01-01T18:00:00.618Z" displayFormat="DD MMM, YYYY h:mm A" pickerFormat="DD MMM YYYY h mm A" [(ngModel)]="start"></ion-datetime>
+    
+      </ion-item>     
+    </ion-card>
+
+  
+    <ion-card class="date">
+        <ion-card-header text-center><b><small>Finish Date and Time </small></b></ion-card-header>
+        <ion-item class="inputdate">
+          <ion-datetime [min] = "mindate" max = "2028-01-01T18:00:00.618Z" displayFormat="DD MMM, YYYY h:mm A" pickerFormat="DD MMM YYYY h mm A" [(ngModel)]="finish"></ion-datetime>
+        </ion-item>     
+    </ion-card>
+
+  </ion-list> 
+
+  
+      <ion-card>
+      <ion-input style="background-color:gainsboro" type="text" placeholder="Work Permit No" [(ngModel)]="workpermitNo"></ion-input>
+      </ion-card>
+
+      <ion-card>
+      <ion-input style="background-color:gainsboro" type="text" placeholder="Description Of Work" [(ngModel)]="desc"></ion-input>
+      </ion-card>
+
+      <ion-card >
+        <ion-grid>
+          <ion-row>
+            
+            <ion-col class="col-head" col-10><b>Document Submitted</b> </ion-col>
+            <ion-col class="col-head"><b>[Tick]</b></ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-1>a)</ion-col>
+            <ion-col col-9> Application Letter </ion-col>
+            <ion-col><ion-checkbox [(ngModel)]="appletter"></ion-checkbox></ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-1>b)</ion-col>
+            <ion-col col-9>Drawing (s) Ref No </ion-col>
+            <ion-col><ion-checkbox [(ngModel)]="drawing"></ion-checkbox></ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-1>c)</ion-col>
+            <ion-col col-9>Work Programme </ion-col>
+            <ion-col><ion-checkbox [(ngModel)]="work"></ion-checkbox></ion-col>
+          </ion-row>
+   
+          <ion-row>
+            <ion-col col-1>d)</ion-col>
+            <ion-col col-9>Method of Statement</ion-col>
+            <ion-col><ion-checkbox [(ngModel)]="statement"></ion-checkbox></ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-1>e)</ion-col>
+            <ion-col col-9>Insurance/BG/Undertaking Letter </ion-col>
+            <ion-col><ion-checkbox [(ngModel)]="insletter"></ion-checkbox></ion-col>
+          </ion-row>
+   
+          <ion-row>
+            <ion-col col-1>f)</ion-col>
+            <ion-col col-9>Traffic Management Plan</ion-col>
+            <ion-col><ion-checkbox [(ngModel)]="trafficplan"></ion-checkbox></ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col col-1>g)</ion-col>
+            <ion-col col-9>Deposit RM1,000.00 (Refundable) </ion-col>
+            <ion-col><ion-checkbox [(ngModel)]="depo"></ion-checkbox></ion-col>
+          </ion-row>
+   
+          <ion-row>
+            <ion-col col-1>h)</ion-col>
+            <ion-col col-9>Administration Charges </ion-col>
+            <ion-col><ion-checkbox [(ngModel)]="charges"></ion-checkbox></ion-col>
+          </ion-row>
+   
+          <ion-row>
+            <ion-col col-1>i)</ion-col>
+            <ion-col col-9>LLM's Permit (if any) </ion-col>
+            <ion-col><ion-checkbox [(ngModel)]="permit"></ion-checkbox></ion-col>
+          </ion-row>
+          <ion-slides *ngIf = "images!= null && images.length != 0" slidesPerView = "3" pager = "ture" paginationType = "fraction">
+              <ion-slide *ngFor = "let image of images">
+                  <img style="padding: 8px" src="{{image}}">
+              </ion-slide>
+          </ion-slides>
+        </ion-grid>
+      </ion-card>
+
+
+      <div text-right>
+          <button (click)="captureProfile()" color="turquoise" ion-button>Upload Doc F</button>
+          <button (click)="openTask5Page()" color="turquoise" ion-button>Next</button>
+          </div>
+</ion-content>

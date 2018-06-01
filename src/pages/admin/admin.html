@@ -1,0 +1,53 @@
+<!--
+  Generated template for the TaskPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+ 
+<ion-content class="background">
+  <br>
+  <br>
+  <br>   
+    <ion-card>
+        <ion-card-content>
+            <br>
+        <div><img src="./assets/imgs/tpads2.png" class="image"/></div>
+         <br>
+         <br>
+
+            <button ion-button (click)="openTask()" color="light" ion-left block large>
+            <ion-icon name="clipboard" color="turquoise" style="margin-right: 10px; "></ion-icon>
+            <div> WORK PERMIT</div> 
+            </button>
+
+            <button ion-button (click)="openAdminContractor()" color="light" ion-left block large>
+            <ion-icon name="ios-list" color="turquoise" style="margin-right: 10px;"></ion-icon>
+            <div> CONTRACTOR</div> 
+            </button>
+
+            <button ion-button (click)="openAdminAstaff()" color="light" ion-left block large>
+            <ion-icon name="people" color="turquoise" style="margin-right: 10px;"></ion-icon>
+            <div> STAFF</div> 
+            </button>
+
+            <button ion-button (click)="openAdministrative()" color="light" ion-left block large>
+            <ion-icon name="person" color="turquoise" style="margin-right: 10px;"></ion-icon>
+            <div>ADMINISTRATIVE</div> 
+            </button>
+
+            <br>
+            <div text-center>
+              <a class="link" (click)="logout()"><b>LOG OUT</b></a>
+              <ion-icon name="power" color="dark"></ion-icon>
+            </div> 
+
+
+
+
+          </ion-card-content>
+        </ion-card>
+
+</ion-content>
+ 

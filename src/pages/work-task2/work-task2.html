@@ -1,0 +1,63 @@
+<ion-header>
+
+    <ion-navbar color="turquoise">
+    
+    <ion-title class>Checklist Report History</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content>
+
+    <div text-center>
+    <h5>Checklist report on {{date}}</h5>
+    </div>
+                
+    <ion-grid>
+        <ion-row>
+        <ion-col class="col-head" col-8 >CHECKLIST</ion-col>
+        <ion-col class="col-head" col-4 >STATUS</ion-col>
+        </ion-row> 
+              
+        <ion-row>
+        <ion-col class="col-1" col-8>Pavement</ion-col>
+        <ion-col class="col-1">{{pavement}}</ion-col>
+        </ion-row>
+              
+        <ion-row>
+        <ion-col class="col-1" col-8>Landscape</ion-col>
+        <ion-col class="col-1">{{landscape}}</ion-col>
+        </ion-row>
+              
+        <ion-row>
+        <ion-col class="col-1" col-8>Road Furnitures</ion-col>
+        <ion-col class="col-1">{{road}}</ion-col>
+        </ion-row>
+              
+        <ion-row>
+        <ion-col class="col-1" col-8>Cleanliness</ion-col>
+        <ion-col class="col-1">{{cleanliness}}</ion-col>
+        </ion-row>
+              
+        <ion-row>
+        <ion-col class="col-1" col-8>Others</ion-col>
+        <ion-col class="col-1">{{others}}</ion-col>
+        </ion-row>
+              
+    </ion-grid>
+                
+              
+    <ion-card >
+        <ion-card-header class="ion-card-content">Comment/Others</ion-card-header>
+        <ion-card-content>
+            <ion-textarea disabled = "true" rows="4" cols="60" [(ngModel)]="comment" class="textarea" placeholder="Comment here"></ion-textarea>
+            <ion-slides *ngIf = "images != null && images.length != 0" slidesPerView = "3" pager = "ture" paginationType = "fraction">
+            <ion-slide *ngFor = "let image of images">
+                <img style="padding: 8px" src="{{image}}">
+            </ion-slide>
+            </ion-slides>
+        </ion-card-content>
+                      
+    </ion-card>
+          
+</ion-content>

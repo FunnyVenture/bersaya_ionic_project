@@ -1,0 +1,73 @@
+<!--
+  Generated template for the Task5Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="turquoise">
+      <ion-title>Edit Work Permit No 1</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+      <ion-list>
+          <ion-item>
+            <ion-label>Select Contractor</ion-label>
+            <ion-select name="Select Contractor" >
+              <ion-option value="Contractor A">Contractor A</ion-option>
+              <ion-option value="Contractor B">Contractor B</ion-option>
+              <ion-option value="Contractor C">Contractor C</ion-option>
+              <ion-option value="Contractor D">Contractor D</ion-option>
+              <ion-option value="Contractor E">Contractor E</ion-option>
+              <ion-option value="Contractor F">Contractor F</ion-option>
+              <ion-option value="Contractor G">Contractor G</ion-option>
+              <ion-option value="Contractor H">Contractor H</ion-option>
+              <ion-option value="Contractor I">Contractor I</ion-option>
+              <ion-option value="Contractor J">Contractor J</ion-option>
+              <ion-option value="Contractor K">Contractor K</ion-option>
+              <ion-option value="Contractor L">Contractor L</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+    
+          <ion-grid>
+            <ion-row>
+              <ion-col col-4> <img src="./assets/imgs/Besraya.png" style="width:100%;"/> </ion-col>
+              <ion-col><ion-checkbox></ion-checkbox></ion-col>
+
+              <ion-col col-4> <img src="./assets/imgs/Lekas.png" style="width:100%;"/> </ion-col>
+              <ion-col><ion-checkbox></ion-checkbox></ion-col>
+
+              <ion-col col-4> <img src="./assets/imgs/Npe.png" style="width:100%;"/> </ion-col>
+              <ion-col><ion-checkbox></ion-checkbox></ion-col>
+              </ion-row>
+        
+          
+            </ion-grid>
+
+            <ion-card-header text-center class="ion-card-header">
+                Create Username & Password For Contractor 
+            </ion-card-header>
+
+            Username
+            <ion-item>
+              <ion-input [(ngModel)]="myText" type="text" ></ion-input>
+            </ion-item>
+
+            Password
+            <ion-item>
+              <ion-input [(ngModel)]="myText" type="text" ></ion-input>
+            </ion-item>
+
+      <div text-right>
+          <button (click)="openAlertPage()" color="turquoise" ion-button>Save</button>
+        </div>
+  
+  </ion-content>
+  

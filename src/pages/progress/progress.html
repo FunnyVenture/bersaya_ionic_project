@@ -1,0 +1,68 @@
+
+
+<ion-header>
+
+        <ion-navbar color="turquoise">
+        
+        <ion-title class>Progress Update</ion-title>
+        </ion-navbar>
+      </ion-header>
+    
+    
+    <ion-content>
+        <ion-list>
+        <ion-card style="background-color:rgb(231, 231, 231)">
+          <ion-card-header class="ion-card-header">
+          <h2 class="h2">Progress</h2> 
+          </ion-card-header>
+          <!-- <ion-card-content style="border-bottom: 1px solid white" *ngFor = "let cell of progress">
+              <ion-textarea disabled = "true" rows="2" cols="50"  placeholder="Add progress.." [(ngModel)]="cell.text"></ion-textarea>
+              <ion-slides *ngIf = "cell.images.length != 0" slidesPerView = "3" pager = "ture" paginationType = "fraction">
+                <ion-slide *ngFor = "let image of cell.images">
+                    <img style="padding: 8px" src="{{image}}">
+                </ion-slide>
+              </ion-slides>
+          </ion-card-content> -->
+        </ion-card>
+        </ion-list>
+
+        <ion-list> 
+        <ion-card style="background-color:rgb(231, 231, 231)">
+            <ion-card-header><b>Upload Form</b></ion-card-header>
+            <ion-card-content>
+                <ion-textarea style="background-color: white;" rows="4" cols="50"  placeholder="Add progress.." [(ngModel)]="progressText"></ion-textarea>
+                <!-- <ion-scroll scrollX="true">
+                  <div class="image-slide">
+                      <div class="image-cell">
+                          <img class="image" src="https://s0.2mdn.net/8049270/Brand_Refresh_GDN_Vlogger_728_x_90.png" alt="Flowers in Chania">
+                      </div>
+
+                      
+                  </div>
+                  
+                    
+                </ion-scroll> -->
+                <ion-slides *ngIf = "images.length != 0" slidesPerView = "3" pager = "ture" paginationType = "fraction">
+                  <ion-slide *ngFor = "let image of images">
+                      <img style="padding: 8px" src="{{image}}">
+                  </ion-slide>
+                </ion-slides>
+                <div text-right>
+                    <button ion-button color="turquoise" (click)="AddImagefromGallery()"><ion-icon name="images" item-start></ion-icon> </button>
+                    <button ion-button color="turquoise" (click)="AddImagefromCamera()"><ion-icon name="camera" item-start></ion-icon> </button>
+                </div>
+            </ion-card-content>
+          
+          </ion-card>
+          <div text-right>
+              <button ion-button color="turquoise" (click)="openAlert()">Complete</button>
+              <!-- <button ion-button color="turquoise" (click)="openUpdatePage()">DELETE</button> -->
+          </div>
+         
+        </ion-list>
+
+          
+           
+    </ion-content>
+    
+

@@ -1,0 +1,55 @@
+
+
+<ion-header>
+
+  <ion-navbar color="turquoise">
+  
+  <ion-title class>Progress Update</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+  <ion-card>
+    <ion-card-header class="ion-card-header">
+    <h2 class="h2">Progress(if available)</h2> 
+    </ion-card-header>
+    <ion-card-content class="ion-card-content">
+      <br>
+      <ion-textarea rows="4" cols="50" placeholder="Add progress.." [(ngModel)]="progress"></ion-textarea>
+    </ion-card-content>
+  </ion-card>
+  </ion-list>
+
+  <ion-list> 
+  <ion-card style="background-color:rgb(231, 231, 231)">
+      <ion-card-header><b>Upload Form</b></ion-card-header>
+
+      <ion-card-content>
+        Please upload anything here.
+        <br>
+        <div text-center>
+            <button ion-button color="turquoise" (click)="captureProfile()" >Upload</button>
+            <img [src]="captureDataUrl2" *ngIf="captureDataUrl2">  
+            <br>   
+        </div>
+        <br>
+        <ion-input class="inputfile" type="text"></ion-input>
+        <br>
+
+      </ion-card-content>
+    
+    </ion-card>
+    <div text-right>
+        <button ion-button color="turquoise" (click)="saveButton()">COMPLETE</button>
+        
+    </div>
+   
+  </ion-list>
+
+    
+     
+</ion-content>
+
+

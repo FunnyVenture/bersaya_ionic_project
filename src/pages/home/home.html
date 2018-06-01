@@ -1,0 +1,51 @@
+
+<ion-content class="background">
+<br>
+<br>
+<br>
+<br>
+
+<ion-card>
+  <ion-card-content>
+    <div><img src="./assets/imgs/tpads2.png" class="image"/></div>
+    <br>
+    <br>
+    <ion-list no-lines>
+     <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" [(ngModel)]="useremail"></ion-input>
+     </ion-item>
+        
+     <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
+     </ion-item>
+    </ion-list>
+
+    <br>
+    <br>
+    
+
+    <div>
+      <button ion-button full color="login" (click)="login()"> SIGN IN </button>
+      <!-- <button ion-button color="login" (click)="openCompaniesPage()"> STAFF </button>
+      <button ion-button color="login" (click)="openContractorPage()"> CONTRACTOR </button> -->
+    </div>
+    
+       
+  </ion-card-content>
+</ion-card>
+
+  </ion-content>
+   <ion-footer>
+      <div class="bar bar-footer bar-stable">
+          <div style="position: absolute;right: 8px;color: red;">
+            Version: 0.11
+          </div>
+          <h1 class="footer">Developed by Studio Diamdiamubi</h1>
+      </div>   
+   </ion-footer>
+  
+    
+  
+  

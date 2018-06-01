@@ -1,0 +1,40 @@
+<!--
+  Generated template for the AdminContractorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="turquoise">
+     <ion-title>Staff</ion-title>
+    <!-- <img src="./assets/imgs/imagess.png" style="width:100%;"/>  
+    -->
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="background" no-padding>
+  <ion-card>
+    <ion-card-header text-center class="ion-card-header">
+    Staff List 
+    </ion-card-header>
+
+    <ion-list>
+    <div *ngFor ="let staff of staffs">
+      <ion-item *ngIf='staff.role=="staff"'>
+        <p (click)="openSelected(staff)">{{staff.name}}, {{staff.email}}</p>
+        <button ion-button color="dark" item-end (click)="deleteSelected(staff)">X</button>  
+      </ion-item>
+    </div>
+    </ion-list>
+
+  </ion-card>
+  
+  <div text-right>
+    New Staff
+  <button class="ion-icon"> 
+    <ion-icon name="add-circle" (click)="openStaff1Page()"> </ion-icon>
+  </button>
+  </div>
+</ion-content>

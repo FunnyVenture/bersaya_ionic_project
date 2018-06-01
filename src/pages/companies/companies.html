@@ -1,0 +1,39 @@
+
+<ion-header>
+
+    <ion-navbar color="turquoise">
+    
+    <ion-title class>{{name}}</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content >
+  <ion-card>
+    <ion-card-header class="ion-card-header">
+        <h2 class="h2">Please select concession companies</h2>
+      </ion-card-header>
+
+      <ion-list radio-group [(ngModel)]="companies">
+        <ion-item>
+          <ion-label><img class="image" src="./assets/imgs/Besraya.png" style="width:100px;height:100px;"/></ion-label>  
+          <ion-radio value="Besraya" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label><img class="image" src="./assets/imgs/Lekas.jpg" style="width:100px;height:100px;"/>  </ion-label>
+          <ion-radio value="Lekas"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label><img class="image" src="./assets/imgs/Npe.png" style="width:150px;height:50px;"/> </ion-label>
+          <ion-radio value="NPE"></ion-radio>
+        </ion-item>
+      </ion-list>
+      <br>
+
+            <div text-right>
+              <button ion-button color="turquoise" (click)="logout()"><h3 class="h3">LogOut</h3></button>
+              <button ion-button class="ion-button" (click)="openStaff()"><h3 class="h3">Next</h3></button>
+            </div>
+                </ion-card>
+            
+</ion-content>

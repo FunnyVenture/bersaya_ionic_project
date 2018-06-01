@@ -1,0 +1,53 @@
+
+<ion-header>
+    <ion-navbar color="turquoise">
+    <ion-title class><marquee>Work Permit {{workpermitNo}}</marquee> </ion-title>
+    </ion-navbar> 
+</ion-header>
+
+  <ion-content>
+    <ion-card>
+      <ion-card-header class="ion-card-header">
+        <h2 class="h2">Report Summary</h2>
+      </ion-card-header>
+      
+      <ion-card-content class="ion-card-content">
+        <br>
+        <p>{{desc}}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <div text-right>
+    <button class="ion-icon">
+      <ion-icon name="add-circle" (click)="openProgressPage()"></ion-icon>
+    </button>
+    </div>
+
+      <ion-card>
+          <ion-card-header class="ion-card-header">
+            <h2 class="h2">Progress Report</h2>
+          </ion-card-header>
+
+          <ion-card-content class="bg">
+
+          
+                  <button *ngFor = "let part of progress; let i = index;" ion-item block class="bg" (click)="openInfoPage(i)"> 
+                    <ion-icon name="document" item-start ></ion-icon>
+                    <marquee>
+                      Report of {{part.date}} by {{contract}}
+                    </marquee>
+                  </button>
+                 
+          
+              
+        </ion-card-content>   
+      </ion-card>
+
+     <div text-center>
+        <button ion-button color="turquoise" (click)="submit()">CLOSE WORK PERMIT</button>
+        <button ion-button color="turquoise" (click)="logout()">LOGOUT</button>
+        <button ion-button color="turquoise" (click)="openAppendixPageShow()">Appendix</button>
+     </div>
+      
+      
+  </ion-content>

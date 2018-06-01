@@ -1,0 +1,43 @@
+
+<ion-header>
+
+  <ion-navbar color="turquoise">
+    <ion-title>{{name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    
+        <ion-card class="style">
+          <ion-card-content>
+            
+            <ion-item>
+              <h2>Name</h2>
+              <p>{{name}}</p>
+            </ion-item>
+
+            <ion-item>
+              <h2>Staff ID</h2>
+              <p>{{staffid}}</p>
+            </ion-item>
+
+            <ion-item>
+              <h2>Username</h2>
+              <p>{{username}}</p>
+            </ion-item>
+
+            <ion-item>
+              <h2>Email</h2>
+              <p>{{email}}</p>
+            </ion-item>
+
+          </ion-card-content>
+        </ion-card>
+        
+        <div text-right>
+          <button (click)="close()" color="turquoise" ion-button>Close</button>
+          <button (click)="edit(id)" color="turquoise" ion-button>EDIT</button>
+        </div>
+        
+</ion-content>

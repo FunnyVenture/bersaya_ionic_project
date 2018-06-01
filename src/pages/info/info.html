@@ -1,0 +1,34 @@
+
+
+<ion-header>
+
+        <ion-navbar color="turquoise">
+        
+        <ion-title class>Progress Update</ion-title>
+        </ion-navbar>
+      </ion-header>
+    
+    
+    <ion-content>
+        <ion-list>
+        <h2 class="h2" style="color: grey; margin-left: 32px;">Report Data {{date}}</h2> 
+        <ion-card style="background-color:rgb(231, 231, 231)">
+          <ion-card-header class="ion-card-header">
+          <h2 class="h2">Progress</h2> 
+          </ion-card-header>
+          <ion-card-content style="border-bottom: 1px solid white"   *ngFor = "let cell of progress">
+              <ion-textarea disabled = "true" rows="2" cols="50"  placeholder="Add progress.." [(ngModel)]="cell.text"></ion-textarea>
+              <ion-slides *ngIf = "cell.images != null && cell.images.length != 0" slidesPerView = "3" pager = "ture" paginationType = "fraction">
+                <ion-slide *ngFor = "let image of cell.images">
+                    <img style="padding: 8px" src="{{image}}">
+                </ion-slide>
+              </ion-slides>
+          </ion-card-content>
+        </ion-card>
+        </ion-list>
+
+          
+           
+    </ion-content>
+    
+

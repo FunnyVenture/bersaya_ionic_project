@@ -1,0 +1,81 @@
+
+<ion-header>
+
+    <ion-navbar color="turquoise">
+    
+    <ion-title> APPENDIX </ion-title>
+    <ion-buttons end>
+      <button *ngIf = "disp == 'true'" ion-button (click)="close()" >CLOSE</button>
+    </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content>
+    <ion-card>
+        <ion-card-header class="ion-card-header" style="background-color: #e7e7e7">
+          <h2 class="h2" style="color: black">Appendix 1</h2>
+        </ion-card-header>
+        
+      <ion-card-content class="ion-card-content">
+          <p>
+              1, This Work permit is valid only for the type of works as described in this form. For other type of works, separate application must be made..
+          </p>
+          <p>
+              2, This work permit is valid only for the date and time mentioned. For works outside the permitted date and time,separate application must be made.
+          </p>
+          <p>
+              3, This application(s) shall comply to all tracffic safety requirements as proposed in the drawings/sketch
+          </p>
+          <p>
+              4, BESRAYA is to conduct site inspection before, during as and when required and after the completion of the said works.
+          </p>
+          <p>
+              5, You are to take all the necessary precautionary measures to ensure that accidents do not occur. You are fully responsible and liable for any accident which may occur due to your work.  
+          </p>
+          <p>
+              6, You are to comply with any other conditions which we may so imposed should that need arises in the course of carrying out the said works.
+          </p>
+          <p>
+              7, BESRAYA reserves the right to withdraw this work permit and order the termination of the said works at any time.
+          </p>
+          <p>
+              8, A Deposit of RM1,000.00 in Bank Draft or company's cheque under BESRAYA (M) SDN BHD is required. The original Work Permit shall be returrned back within 1 week after the works completed. Failure which the deposit will be forfeited.
+          </p>
+          <p>
+              9, Any change in contractors, third party must notify to BESRAYA.
+          </p>
+
+          <ion-item *ngIf = "disp == 'false'" item-end style="width: 220px;margin-left: calc(100% - 220px); background-color: #e7e7e7">
+              <ion-label>Read and Understand</ion-label>
+              <ion-checkbox [(ngModel)]="agree" item-end></ion-checkbox>
+          </ion-item>
+
+      </ion-card-content>  
+
+    </ion-card>
+
+    <br>
+
+    <ion-card>
+        <ion-card-header class="ion-card-header" style="background-color: #e7e7e7">
+          <h2 class="h2" style="color: black">Acknowledge</h2>
+        </ion-card-header>
+        
+        <ion-card-content class="ion-card-content">
+          <p>
+            We understand that in the course of carrying out the works, safety precautions must be observed at all times. We will comply with all conditions, as listed in Appendix 1, imposed upon us during the execution of works. if we faill to do so, BESRAYA reserves the right to stop our works immediatelly.
+          </p>
+
+        <div *ngIf = "disp == 'false'" text-center>
+          <button ion-button color="turquoise" (click) = "PressAgree()" >Yes, I Agree</button>
+          <button ion-button color="danger" (click) = "NoPressAgree()" >Not Agree</button>
+        </div>
+        </ion-card-content>
+
+        
+        
+    </ion-card>
+      
+
+</ion-content>

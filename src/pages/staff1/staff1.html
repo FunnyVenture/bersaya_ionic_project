@@ -1,0 +1,67 @@
+<!--
+  Generated template for the Staff1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="turquoise">
+    <ion-title>Register Staff</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card class = "style" >
+        <ion-card-content>
+
+        Email:
+          <ion-item>
+            <ion-input [(ngModel)]="email" type="email" (input)="runTimeChange($event)" ></ion-input>
+          </ion-item>
+
+        Password :
+          <ion-item>
+            <ion-input [(ngModel)]="password" type="password" ></ion-input>
+          </ion-item>
+
+        Name :
+        <ion-item>
+        <ion-input disabled = "true" [(ngModel)]="name" type="text" ></ion-input>
+        </ion-item>
+    
+        Staff ID :
+        <ion-item>
+        <ion-input [(ngModel)]="staffid" type="text" ></ion-input>
+        </ion-item>
+
+        Consession :
+        <ion-item>
+          <ion-select [(ngModel)]="consession">
+            <ion-option>Besraya</ion-option>
+            <ion-option>Lekas</ion-option>
+            <ion-option>NPE</ion-option>
+          </ion-select>
+        </ion-item>
+      
+        <!-- Username :
+        <ion-item>
+        <ion-input [(ngModel)]="username" type="text" ></ion-input>
+        </ion-item> -->
+      
+        
+
+        
+    
+          
+        </ion-card-content>
+      </ion-card>
+
+      <div text-right>
+          <div text-right>
+              <button (click)="add()" color="turquoise" ion-button>REGISTER</button>
+          </div>
+    </div>
+</ion-content>

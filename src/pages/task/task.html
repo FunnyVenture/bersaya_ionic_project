@@ -1,0 +1,37 @@
+<!--
+  Generated template for the TaskPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="turquoise">
+    <ion-title>Work Permit</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background" no-padding>
+    <ion-card>
+      <ion-card-header text-center class="ion-card-header">Work Permit List</ion-card-header>
+         
+      <ion-list>
+      <div >
+        <ion-item *ngFor ="let work of works; let i = index;">
+          <p (click)="openSelected(work)"><b>Consession:</b> {{work.consession}} | {{work.workpermitNo}}  {{work.finshString}} </p>
+          <button ion-button color="dark" item-end (click)="deleteSelected(work)">X</button>
+        </ion-item>
+      </div>
+      </ion-list> 
+
+    </ion-card>
+  
+  <div text-right>New Work Permit
+  <button class="ion-icon"> 
+  <ion-icon name="add-circle" (click)="openTask4Page()"> </ion-icon>
+  </button>
+  </div>
+
+</ion-content>

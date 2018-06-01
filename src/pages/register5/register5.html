@@ -1,0 +1,59 @@
+<!--
+  Generated template for the Register5Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="turquoise">
+      <ion-title>Register Sub-Contractor</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  <ion-card class = "style" >
+    <ion-card-content>
+      Contact Person
+      <ion-item>
+      <ion-input [(ngModel)]="cperson_sc" type="text" ></ion-input>
+     </ion-item>
+     
+      Telephone Office
+     <ion-item>
+      <ion-input [(ngModel)]="officenum_sc" type="text" ></ion-input>
+    </ion-item>
+    
+      Telephone Mobile
+      <ion-item>
+        <ion-input [(ngModel)]="mobilenum_sc" type="text" ></ion-input>
+      </ion-item>
+       
+      Email
+      <ion-item>
+        <ion-input [(ngModel)]="email_sc" type="email" ></ion-input>
+      </ion-item>
+    
+    </ion-card-content>
+  </ion-card>
+  
+  <div text-center>
+      <button > 
+          <ion-icon (click)="openRegister4Page()"  name="arrow-back"> </ion-icon>
+        </button> 
+       
+      <button > 
+          <ion-icon name="radio-button-off"> </ion-icon>
+        </button>
+  
+      <button >
+          <ion-icon name="radio-button-on"></ion-icon>
+        </button>
+        
+        <button (click)="add()" color="turquoise" ion-button>REGISTER</button>
+  
+    </div>
+  </ion-content>
+  

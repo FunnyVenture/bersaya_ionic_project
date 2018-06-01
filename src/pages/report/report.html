@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="turquoise">
+  
+  <ion-title class>Progress Report History</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-card>
+        <ion-card-header class="ion-card-header">
+          <h2 class="h2">Report History</h2>
+        </ion-card-header>
+
+        <ion-card-content class="bg">
+        <ion-list>
+            <button *ngFor = "let part of progress; let i = index;" ion-item block class="bg" (click)="openHistory(i)"> 
+              <ion-icon name="document" item-start ></ion-icon>
+              <marquee>
+                Report of {{part.date}} by {{contract}}
+              </marquee>
+            </button>
+        </ion-list>
+        </ion-card-content>   
+    </ion-card>
+  
+</ion-content>

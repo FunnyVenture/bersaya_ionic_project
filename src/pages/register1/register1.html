@@ -1,0 +1,116 @@
+<!--
+  Generated template for the Register1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="turquoise">
+    <ion-title>Register Contractor</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-slides style="height: 300px" (ionSlideDidChange)="slideChanged()">
+        <ion-slide>
+            <ion-card class = "style" style="margin-top: -36px;" >
+                <ion-card-content>
+                  Company Name
+                  <ion-item>
+                  <ion-input [(ngModel)]="compname" type="text" ></ion-input>
+                  </ion-item>
+                  <br>
+                  Address
+                  <ion-item>
+                    <ion-textarea rows="4" cols="60" [(ngModel)]="address" placeholder="Full address..."></ion-textarea>
+                  </ion-item>
+                
+                </ion-card-content>
+              </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card class = "style"  >
+              <ion-card-content>
+                Contact Person
+                <ion-item>
+                <ion-input [(ngModel)]="cperson" type="text" ></ion-input>
+                </ion-item>
+                
+                Telephone Office
+                <ion-item>
+                <ion-input [(ngModel)]="officenum" type="text" ></ion-input>
+              </ion-item>
+              
+                Telephone Mobile
+                <ion-item>
+                  <ion-input [(ngModel)]="mobilenum" type="text" ></ion-input>
+                </ion-item>
+              
+                Email
+                <ion-item>
+                  <ion-input [(ngModel)]="email" type="email" ></ion-input>
+                </ion-item>
+              </ion-card-content>
+            </ion-card>
+        </ion-slide>
+        <ion-slide *ngIf = "showSubCom == true">
+            <ion-card class = "style" style="margin-top: -36px;" >
+                <ion-card-content>
+                 Sub Company Name
+                  <ion-item>
+                  <ion-input [(ngModel)]="subcontname" type="text" ></ion-input>
+                  </ion-item>
+                  <br>
+                 Sub Address
+                  <ion-item>
+                    <ion-textarea rows="4" cols="60" [(ngModel)]="address_sc" placeholder="Full address..."></ion-textarea>
+                  </ion-item>
+                
+                </ion-card-content>
+              </ion-card>
+        </ion-slide>
+        <ion-slide *ngIf = "showSubCom == true">
+            <ion-card class = "style"  >
+              <ion-card-content>
+               Sub Contact Person
+                <ion-item>
+                <ion-input [(ngModel)]="cperson_sc" type="text" ></ion-input>
+                </ion-item>
+                
+               Sub Telephone Office
+                <ion-item>
+                <ion-input [(ngModel)]="officenum_sc" type="text" ></ion-input>
+              </ion-item>
+              
+               Sub Telephone Mobile
+                <ion-item>
+                  <ion-input [(ngModel)]="mobilenum_sc" type="text" ></ion-input>
+                </ion-item>
+               Sub Email
+                <ion-item>
+                  <ion-input [(ngModel)]="email_sc" type="email" ></ion-input>
+                </ion-item>
+              </ion-card-content>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+   
+
+<div text-center style="margin-top:10px">
+  <!-- <button > <ion-icon  name="arrow-back" (click)="goToSlide('0')" > </ion-icon> </button>   -->
+  <button style="background-color: white;" *ngIf = "pageNumber == 0" > <ion-icon name="radio-button-on"> </ion-icon></button>
+  <button style="background-color: white;" *ngIf = "pageNumber != 0" > <ion-icon (click)="goToSlide('0')" name="radio-button-off"> </ion-icon></button>
+  <button style="background-color: white;" *ngIf = "pageNumber == 1" > <ion-icon name="radio-button-on"> </ion-icon></button>
+  <button style="background-color: white;" *ngIf = "pageNumber != 1" > <ion-icon (click)="goToSlide('1')" name="radio-button-off"> </ion-icon></button>
+  <button style="background-color: white;" *ngIf = "pageNumber == 2 && showSubCom == true " > <ion-icon name="radio-button-on"> </ion-icon></button>
+  <button style="background-color: white;" *ngIf = "pageNumber != 2 && showSubCom == true" > <ion-icon (click)="goToSlide('2')" name="radio-button-off"> </ion-icon></button>
+  <button style="background-color: white;" *ngIf = "pageNumber == 3 && showSubCom == true" > <ion-icon name="radio-button-on"> </ion-icon></button>
+  <button style="background-color: white;" *ngIf = "pageNumber != 3 && showSubCom == true" > <ion-icon (click)="goToSlide('3')" name="radio-button-off"> </ion-icon></button>
+  <!-- <button > <ion-icon (click)="goToSlide('1')" name="arrow-forward" > </ion-icon></button>  -->
+  <button  (click)="AddData()" *ngIf = "pageNumber == 1 && showSubCom == false" color="turquoise" class="add-btn" ion-button item-end>Add</button>
+  <button  (click)="AddDataSub()" *ngIf = "pageNumber == 3 && showSubCom == true" color="turquoise" class="add-btn" ion-button item-end>Add</button>
+</div>
+</ion-content>

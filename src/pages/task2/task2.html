@@ -1,0 +1,54 @@
+<!--
+  Generated template for the Task2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="turquoise">
+    <ion-title>Update Work Permit</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item>
+         <ion-label>Select Contractor</ion-label>
+          <ion-select [(ngModel)]="contractor">
+            <ion-option *ngFor="let contractor of contractors" value="{{contractor.compname}}">{{contractor.compname}}</ion-option>  
+          </ion-select>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+          <ion-label>Select Consession</ion-label>
+          <ion-select [(ngModel)]="consession">
+            <ion-option>Besraya</ion-option>
+            <ion-option>Lekas</ion-option>
+            <ion-option>NPE</ion-option>
+          </ion-select>
+      </ion-item>
+    </ion-list>
+       
+        <h5 text-center>
+            Credentials of Contractor 
+        </h5>
+
+        
+        <ion-item>
+          <ion-label>USERNAME:</ion-label>
+          <ion-input [(ngModel)]="email" type="email"></ion-input>
+        </ion-item>
+
+        <br>
+
+        <div text-right>
+          <button (click)="update()" color="turquoise" ion-button>UPDATE</button>
+        </div>
+
+</ion-content>

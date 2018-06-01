@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar color="turquoise">
+    <ion-title>Update Administrative </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-card class = "style" >
+  <ion-card-content>
+    Email
+    <ion-item>
+      <ion-input [(ngModel)]="email" type="email" [disabled]="true"></ion-input>
+    </ion-item>
+
+    Password
+    <ion-item>
+      <ion-input [(ngModel)]="password" type="password" [disabled]="true"></ion-input>
+    </ion-item>
+
+    Name
+    <ion-item>
+      <ion-input [(ngModel)]="name" type="text" disabled = "true"></ion-input>
+    </ion-item>
+
+    Staff ID
+   <ion-item>
+    <ion-input  [(ngModel)]="staffid" type="text" disabled = "{{!editAdmin}}"></ion-input>
+  </ion-item>
+
+  <!-- Username
+    <ion-item>
+    <ion-input [(ngModel)]="username" type="text" disabled = "{{!editAdmin}}"></ion-input>
+  </ion-item> -->
+
+  
+
+ 
+
+  </ion-card-content>
+</ion-card>
+
+<div text-right>
+  <!-- <button (click)="close()" color="turquoise" ion-button>CLOSE</button> -->
+  <button (click)="confirmEdit()" color="turquoise" ion-button> {{editBtnTitle}}</button>
+</div>
+
+</ion-content>

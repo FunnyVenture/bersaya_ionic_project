@@ -1,0 +1,40 @@
+<!--
+  Generated template for the AdminContractorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="turquoise">
+     <ion-title>Contractor</ion-title>
+
+    <!-- <img src="./assets/imgs/imagess.png" style="width:100%;"/>  
+    -->
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="background" no-padding>
+    <ion-card>
+    <ion-card-header text-center class="ion-card-header">
+    Contractor List 
+    </ion-card-header>
+
+    <ion-list >
+      <ion-item *ngFor ="let contractor of contractors" >
+        <p (click)="openSelected(contractor)"><b>COMPANY : </b>{{contractor.compname}}</p>
+        <button ion-button color="dark" item-end (click)="deleteSelected(contractor)">X</button>
+      </ion-item>
+      
+    </ion-list>
+    </ion-card>
+
+    <div text-right>
+     New Contractor
+    <button class="ion-icon"> 
+      <ion-icon name="add-circle" (click)="openRegister1Page()" > </ion-icon>
+    </button>
+    </div>
+    
+</ion-content>

@@ -1,0 +1,85 @@
+<ion-header>
+
+    <ion-navbar color="turquoise">
+    
+    <ion-title class>New Checklist</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content>
+
+    <ion-card>
+
+        <ion-grid>
+        <ion-row>
+          <ion-col col-7><b>CHECKLIST</b></ion-col>
+          <ion-col col-5><b>ACCEPT/REPAIR</b></ion-col>
+        </ion-row>
+        </ion-grid>
+  
+        <ion-list>
+          <ion-item>
+            <ion-label>Pavement</ion-label>
+            <ion-select [(ngModel)]="pavement">
+                <ion-option value="Accept">Accept</ion-option>
+                <ion-option value="Need Repair">Need Repair</ion-option>
+            </ion-select>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label>Landscape</ion-label>
+            <ion-select [(ngModel)]="landscape">
+                <ion-option value="Accept">Accept</ion-option>
+                <ion-option value="Need Repair">Need Repair</ion-option>
+            </ion-select>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label>Road Furnitures</ion-label>
+            <ion-select [(ngModel)]="road">
+                <ion-option value="Accept">Accept</ion-option>
+                <ion-option value="Need Repair">Need Repair</ion-option>
+            </ion-select>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label>Cleanliness</ion-label>
+            <ion-select [(ngModel)]="cleanliness">
+                <ion-option value="Accept">Accept</ion-option>
+                <ion-option value="Need Repair">Need Repair</ion-option>
+            </ion-select>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label>Others</ion-label>
+            <ion-select [(ngModel)]="others">
+                <ion-option value="Accept">Accept</ion-option>
+                <ion-option value="Need Repair">Need Repair</ion-option>
+            </ion-select>
+          </ion-item>
+  
+        </ion-list>
+      </ion-card>
+
+      <ion-card >
+        <ion-card-header class="ion-card-content">Comment/Others</ion-card-header>
+        <ion-card-content>
+          <ion-textarea rows="4" cols="60" class="textarea" [(ngModel)]="comment" placeholder="Comment here"></ion-textarea>
+          <ion-slides *ngIf = "images.length != 0" slidesPerView = "3" pager = "ture" paginationType = "fraction">
+              <ion-slide *ngFor = "let image of images">
+                  <img style="padding: 8px" src="{{image}}">
+              </ion-slide>
+            </ion-slides>
+        </ion-card-content>
+      </ion-card>
+    
+          
+    
+        <div text-right>
+          <button color="turquoise" ion-button icon-right  (click)="captureProfile()">Upload Image</button> 
+          <button ion-button (click)="submit()">Submit Report</button>
+        </div>
+    
+  
+</ion-content>

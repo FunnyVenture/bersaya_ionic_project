@@ -1,0 +1,52 @@
+<ion-header>
+
+    <ion-navbar color="turquoise">
+    
+    <ion-title class><marquee>Work Permit {{workpermitNo}}</marquee></ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+      
+      <ion-card>
+          <ion-card-header class="ion-card-header">
+            <h2 class="h2">Task Summary</h2>
+          </ion-card-header>
+          
+          <ion-card-content class="ion-card-content">
+            <br>
+            <p>{{desc}}</p>
+          </ion-card-content>
+        </ion-card>
+    
+        <div text-right>
+          Checklist
+        <button class="ion-icon">
+        <ion-icon name="add-circle" (click)="openNewChecklistPage()"></ion-icon>
+        </button>
+        </div>
+    
+        <ion-card>
+            <ion-card-header class="ion-card-header">
+              <h2 class="h2">Report History</h2>
+            </ion-card-header>
+    
+            <ion-card-content class="bg">
+            <ion-list>
+                <button *ngFor = "let cell of checklist; let i = index; " ion-item class="bg" (click)="openWorkTask2(i)"> 
+                    <ion-icon name="document" item-start ></ion-icon>
+                    <marquee>
+                      Report of {{cell.date}} by {{name}}
+                    </marquee>
+                  </button>
+                   
+            </ion-list>
+            </ion-card-content>   
+        </ion-card>
+        <div text-center>
+          <button ion-button color="turquoise" (click)="openReportPage()">
+            View Progress Report
+          </button>
+          </div>
+    
+  </ion-content>

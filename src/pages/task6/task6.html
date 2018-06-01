@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-navbar color="turquoise">
+  
+  <ion-title>{{name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header text-center class="ion-card-header">
+    LIST OF TASK
+    </ion-card-header>
+ 
+    <ion-list>
+    <div text-center>
+      <ion-item *ngFor ="let work of workpermit let i = index" >
+        <ion-icon name="clipboard" item-start></ion-icon> 
+        <p (click)="openChecklistPage(i)">WORK PERMIT {{work.workpermitNo}}</p>    
+      </ion-item>
+    </div>
+    </ion-list>
+    
+  </ion-card>
+
+   
+   
+</ion-content>

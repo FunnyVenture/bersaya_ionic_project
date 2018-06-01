@@ -1,0 +1,33 @@
+page-progress {
+
+    .ion-card-header {
+        background-color: rgb(85, 85, 78);
+    }
+    
+    .inputfile{
+        background-color: white;
+        border-radius: 5px;
+    }
+    
+    .ion-card-content {
+        background-color: rgb(231, 231, 231);
+    }
+
+    .image {
+        border-radius: 7px;
+        
+    }
+
+    .h2 {
+        color:white;
+    }
+
+    .image-cell {
+        width: 33%;
+        img {
+            width: 100%;
+            height: 100%;
+            padding: 8px;
+        }
+    }
+}
